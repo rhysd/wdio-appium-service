@@ -2,7 +2,7 @@
   "name": "wdio-appium-service",
   "version": "0.1.0",
   "description": "webdriver.io service to start & stop Appium server",
-  "main": "index.js",
+  "main": "launcher.js",
   "engines": {
     "node": ">=4.4"
   },

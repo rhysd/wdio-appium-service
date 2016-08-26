@@ -35,7 +35,7 @@ exports.config = {
       browserName: 'iOS',
       appiumVersion: '1.5.3',
       platformName: 'iOS',
-      platformVersion: '9.1',
+      platformVersion: '8.1',
       deviceName: 'iPhone 6',
       orientation: 'PORTRAIT',
       app: APP_PATH
