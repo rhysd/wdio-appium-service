@@ -1,10 +1,17 @@
 {
   "extends": ["eslint:recommended", "plugin:node/recommended"],
   "plugins": ["node", "promise"],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
   "rules": {
     "promise/param-names": 2,
     "promise/always-return": 2,
     "promise/catch-or-return": 2,
     "promise/no-native": 0
+  },
+  "globals": {
+    "browser": true
   }
 }

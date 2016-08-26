@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const APP_PATH = path.join(__dirname, '../node_modules/ios-uicatalog/build/Release-iphonesimulator/UICatalog-iphonesimulator.app');
 
