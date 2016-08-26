@@ -4,11 +4,11 @@ const spawn = require('child_process').spawn;
 
 class AppiumLauncher {
     onPrepare(config) {
-        this.appiumArgs = config.appiumArgs || [];
-        this.appiumLogs = config.appiumLogs || {};
-        this.appiumCommand = config.appiumCommand || 'appium';
-        this.appiumWaitStartTime = config.appiumWaitStartTime || 5000;
-        this.logToStdout = !!config.logToStdout;
+        const c = config.appium || {};
+
+        this.appiumArgs = c.args || [];
+        this.appiumCommand = c.command || 'appium';
+        this.appiumWaitStartTime = c.waitStartTime || 5000;
 
         return this._startAppium().then(p => {
             this.process = p;
