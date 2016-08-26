@@ -70,7 +70,8 @@ exports.config = {
   ],
 
   appium: {
-    "args": [
+    command: path.join(__dirname, '..', 'node_modules', '.bin', 'appium'),
+    args: [
       "--address", "127.0.0.1",
       "--command-timeout", "7200",
       "--session-override",

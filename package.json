@@ -36,5 +36,8 @@
     "mocha": "^3.0.2",
     "wdio-mocha-framework": "^0.4.0",
     "webdriverio": "^4.2.8"
+  },
+  "peerDependencies": {
+    "appium": ">=1.4"
   }
 }

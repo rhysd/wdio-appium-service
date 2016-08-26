@@ -5,8 +5,8 @@ node_js: "6"
 os: osx
 
 before_script:
+    - npm install appium
     - npm install
-    - npm install -g appium@1.5
 
 script:
     - npm run lint
