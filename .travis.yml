@@ -1,0 +1,22 @@
+language: node_js
+
+node_js: "6"
+
+os: osx
+
+before_script:
+    - npm install
+
+script:
+    - npm run lint
+    - npm run test
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+    email:
+        on_success: never
+        on_failure: change
+
