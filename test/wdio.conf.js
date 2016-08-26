@@ -71,18 +71,18 @@ exports.config = {
 
   appium: {
     command: path.join(__dirname, '..', 'node_modules', '.bin', 'appium'),
-    args: [
-      "--address", "127.0.0.1",
-      "--command-timeout", "7200",
-      "--session-override",
-      "--debug-log-spacing",
-      "--platform-version", "9.1",
-      "--platform-name", "iOS",
-      "--show-ios-log",
-      "--device-name", "iPhone 6",
-      "--native-instruments-lib",
-      "--isolate-sim-device",
-      "--app", APP_PATH
-    ]
+    args: {
+      address: '127.0.0.1',
+      commandTimeout: '7200',
+      sessionOverride: true,
+      debugLogSpacing: true,
+      platformVersion: '9.1',
+      platformName: 'iOS',
+      showIosLog: true,
+      deviceName: 'iPhone 6',
+      nativeInstrumentsLib: true,
+      isolateSimDevice: true,
+      app: APP_PATH
+    }
   }
 };
