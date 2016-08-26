@@ -1,0 +1,30 @@
+{
+  "name": "wdio-appium-service",
+  "version": "0.0.1",
+  "description": "webdriver.io service to start & stop Appium server",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhysd/wdio-appium-service.git"
+  },
+  "keywords": [
+    "webdriverio",
+    "wdio",
+    "wdio-service",
+    "appium",
+    "server",
+    "tests"
+  ],
+  "author": "rhysd <lin90162@yahoo.co.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhysd/wdio-appium-service/issues"
+  },
+  "homepage": "https://github.com/rhysd/wdio-appium-service#readme"
+}
