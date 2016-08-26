@@ -17,7 +17,6 @@ Please register this package as service plugin and specify command line argument
   ],
 
   appium: {
-    command: path.join(__dirname, '..', 'node_modules', '.bin', 'appium'),
     args: {
       address: '127.0.0.1',
       commandTimeout: '7200',
@@ -35,6 +34,8 @@ Please register this package as service plugin and specify command line argument
 }
 ```
 
-For `args`, you can specify keys in lowerCamel.  Its values are interpreted as its value.  If value is boolean, `true` means specifying the key and `false` means not specifying.  For example, `platformVersion: '9.1'` will be converted to `--platform-version=9.1`, `sessionOverride: true` will be `--session-override`, `showIosLog: false` will specify nothing.
+For `args`, you can specify keys in lowerCamel.  Its values are interpreted as its value.  If value is boolean, `true` means specifying the key and `false` means not specifying.
+
+For example, `platformVersion: '9.1'` will be converted to `--platform-version=9.1`, `sessionOverride: true` will be `--session-override`, `showIosLog: false` will specify nothing.
 
 This software is distributed under the MIT license.
