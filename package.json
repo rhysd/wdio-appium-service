@@ -7,6 +7,7 @@
     "node": ">=4.4"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/rhysd/wdio-appium-service/issues"
   },
-  "homepage": "https://github.com/rhysd/wdio-appium-service#readme"
+  "homepage": "https://github.com/rhysd/wdio-appium-service#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-plugin-node": "^2.0.0",
+    "eslint-plugin-promise": "^2.0.1"
+  }
 }
