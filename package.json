@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio test/wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,10 @@
   "devDependencies": {
     "eslint": "^3.3.1",
     "eslint-plugin-node": "^2.0.0",
-    "eslint-plugin-promise": "^2.0.1"
+    "eslint-plugin-promise": "^2.0.1",
+    "ios-uicatalog": "^1.0.4",
+    "mocha": "^3.0.2",
+    "wdio-mocha-framework": "^0.4.0",
+    "webdriverio": "^4.2.8"
   }
 }
