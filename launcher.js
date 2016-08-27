@@ -1,6 +1,8 @@
 'use strict';
 
 const spawn = require('child_process').spawn;
+const path = require('path');
+const fs = require('fs');
 
 function lowerCamelToOptionName(s) {
     let ret = '--';
@@ -41,12 +43,37 @@ function keyValueToCliArgs(keyValue) {
     return ret;
 }
 
+function detectAppiumCommand(p) {
+    while (true) {
+        p = path.dirname(p);
+
+        const parsed = path.parse(p);
+        if (parsed.root === parsed.dir && parsed.name === '') {
+            // When 'p' indicates root directory, local 'appium' command was not found.
+            return null;
+        }
+
+        if (parsed.name !== 'node_modules') {
+            continue;
+        }
+
+        const cmd = path.join(p, '.bin', 'appium');
+        try {
+            if (fs.lstatSync(cmd).isFile()) {
+                return cmd;
+            }
+        } catch(e) {
+            // Do nothing
+        }
+    }
+}
+
 class AppiumLauncher {
     onPrepare(config) {
         const c = config.appium || {};
 
         this.appiumArgs = keyValueToCliArgs(c.args || {});
-        this.appiumCommand = c.command || 'appium';
+        this.appiumCommand = c.command || detectAppiumCommand(p) || 'appium';
         this.appiumWaitStartTime = c.waitStartTime || 5000;
 
         return this._startAppium().then(p => {
