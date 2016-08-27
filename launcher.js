@@ -19,6 +19,12 @@ function lowerCamelToOptionName(s) {
 }
 
 function keyValueToCliArgs(keyValue) {
+    if (Array.isArray(keyValue)) {
+        // Note:
+        // If specified as array, this plugin assumes it as the string list of command line arguments.
+        return keyValue;
+    }
+
     const ret = [];
     for (let key in keyValue) {
         const value = keyValue[key];
