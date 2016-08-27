@@ -6,6 +6,9 @@
     "mocha": true
   },
   "rules": {
+    "semi": [2, "always"],
+    "quotes": [2, "single"],
+    "linebreak-style": [2, "unix"],
     "no-constant-condition": 0,
     "promise/param-names": 2,
     "promise/always-return": 2,
