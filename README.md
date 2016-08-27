@@ -12,7 +12,7 @@ Please register this package as service plugin and specify command line argument
 {
   ... // Other config
 
-  service: [
+  services: [
     require('wdio-appium-service')
   ],
 
