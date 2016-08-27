@@ -73,7 +73,7 @@ class AppiumLauncher {
         const c = config.appium || {};
 
         this.appiumArgs = keyValueToCliArgs(c.args || {});
-        this.appiumCommand = c.command || detectAppiumCommand(p) || 'appium';
+        this.appiumCommand = c.command || detectAppiumCommand(__dirname) || 'appium';
         this.appiumWaitStartTime = c.waitStartTime || 5000;
 
         return this._startAppium().then(p => {

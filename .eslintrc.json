@@ -6,6 +6,7 @@
     "mocha": true
   },
   "rules": {
+    "no-constant-condition": 0,
     "promise/param-names": 2,
     "promise/always-return": 2,
     "promise/catch-or-return": 2,
