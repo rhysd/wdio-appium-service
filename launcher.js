@@ -83,7 +83,7 @@ class AppiumLauncher {
     }
 
     onComplete() {
-        if (!this.process.killed) {
+        if (this.process !== undefined && !this.process.killed) {
             this.process.kill();
         }
     }
