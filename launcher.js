@@ -91,13 +91,19 @@ class AppiumLauncher {
     _startAppium() {
         return new Promise((resolve, reject) => {
             const p = spawn(this.appiumCommand, this.appiumArgs, {stdio: ['ignore', 'pipe', 'pipe']});
-            setTimeout(() => {
+            const timer = setTimeout(() => {
+                p.removeListener('exit', exitCallback);
                 if (p.exitCode === null) {
                     resolve(p);
                 } else {
                     reject(new Error('Appium exited just after starting with exit code:' + p.exitCode));
                 }
             }, this.appiumWaitStartTime);
+            const exitCallback = code => {
+                clearTimeout(timer);
+                reject(new Error('Appium exited before timeout (Exit code: ' + code + ')'));
+            };
+            p.once('exit', exitCallback);
         });
     }
 }
