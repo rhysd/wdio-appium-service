@@ -2,7 +2,7 @@ Webdriver.io service plugin for Appium
 ======================================
 [![Build Status](https://travis-ci.org/rhysd/wdio-appium-service.svg?branch=master)](https://travis-ci.org/rhysd/wdio-appium-service)
 
-[webdriver.io](http://webdriver.io/) service plugin for [Appium](http://appium.io/).  With this service installed, you need not to run Appium manually.  Please see [the manual for wdio-selenium-standalone-service](http://webdriver.io/guide/services/selenium-standalone.html) for more detail.
+[webdriver.io](http://webdriver.io/) service plugin for [Appium](http://appium.io/).  With this service installed, you need not to run Appium manually.
 
 ## How to Use
 
@@ -12,9 +12,7 @@ Please register this package as service plugin and specify command line argument
 {
   ... // Other config
 
-  services: [
-    require('wdio-appium-service')
-  ],
+  services: ['appium'],
 
   appium: {
     args: {
