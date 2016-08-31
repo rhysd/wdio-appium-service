@@ -16,4 +16,10 @@ describe('launcher', () => {
         assert.equal(args[3], '7200');
         assert.equal(args[4], '--session-override');
     });
+
+    it('should format key', () => {
+        assert.equal(launcher._lowerCamelToOptionName('address'), '--address');
+        assert.equal(launcher._lowerCamelToOptionName('fooBar'), '--foo-bar');
+        assert.equal(launcher._lowerCamelToOptionName('fooBarSonDo'), '--foo-bar-son-do');
+    });
 });
