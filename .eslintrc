@@ -1,11 +1,14 @@
 {
-  "extends": ["eslint:recommended", "plugin:node/recommended"],
-  "plugins": ["node", "promise"],
+  "extends": ["standard"],
+  "plugins": ["promise"],
   "env": {
-    "node": true,
-    "mocha": true
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
   },
   "rules": {
+    "indent": [2, 4],
     "semi": [2, "always"],
     "quotes": [2, "single"],
     "linebreak-style": [2, "unix"],
@@ -14,8 +17,5 @@
     "promise/always-return": 2,
     "promise/catch-or-return": 2,
     "promise/no-native": 0
-  },
-  "globals": {
-    "browser": true
   }
 }
