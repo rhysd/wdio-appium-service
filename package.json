@@ -10,6 +10,7 @@
     "lint": "eslint lib/*.js",
     "build": "grunt build",
     "prepublish": "npm prune && npm run build",
+    "postinstall": "npm run build",
     "watch": "grunt watch",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha --compilers js:babel-register --recursive test/unit",

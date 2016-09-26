@@ -36,4 +36,10 @@ For `args`, you can specify keys in lowerCamel.  Its values are interpreted as i
 
 For example, `platformVersion: '9.1'` will be converted to `--platform-version=9.1`, `sessionOverride: true` will be `--session-override`, `showIosLog: false` will specify nothing.
 
+## Debug Log
+
+If `NODE_ENV` environment variable is set to `debug`, this service plugin dumps debug log to `wdio_appium_service_debug_log.txt`.
+
+## License
+
 This software is distributed under the MIT license.
