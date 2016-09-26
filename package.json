@@ -7,7 +7,7 @@
     "node": ">=4.4"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint lib/*.js",
     "build": "grunt build",
     "prepublish": "npm prune && npm run build",
     "watch": "grunt watch",
