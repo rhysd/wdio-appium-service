@@ -16,7 +16,17 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        flow: {
+            src: 'lib/**/*.js',
+            options: {
+                server: true
+            }
+        },
         watch: {
+            flow: {
+                files: ['lib/**/*.js'],
+                tasks: ['flow']
+            },
             dist: {
                 files: ['./lib/**/*.js'],
                 tasks: ['babel:dist']
@@ -46,13 +56,14 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['build']);
     grunt.registerTask('build', 'Build wdio-appium-service', function () {
         grunt.task.run([
-            'eslint',
             'clean',
+            'flow',
             'babel'
         ]);
     });
     grunt.registerTask('release', 'Bump and tag version', function (type) {
         grunt.task.run([
+            'eslint',
             'build',
             'contributors',
             'bump:' + (type || 'patch')
