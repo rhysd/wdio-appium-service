@@ -1,6 +1,6 @@
 {
   "name": "wdio-appium-service",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "webdriver.io service to start & stop Appium server",
   "main": "index.js",
   "engines": {
@@ -10,7 +10,6 @@
     "lint": "eslint lib/*.js",
     "build": "grunt build",
     "prepublish": "npm prune && npm run build",
-    "postinstall": "npm run build",
     "watch": "grunt watch",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha --compilers js:babel-register --recursive test/unit",
