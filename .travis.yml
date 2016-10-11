@@ -1,11 +1,12 @@
 language: node_js
 
-node_js: "6"
+node_js: "latest"
 
 os: osx
+osx_image: xcode8
 
 before_script:
-    - npm install appium
+    - npm install appium@1.5.3
     - npm install
 
 script:

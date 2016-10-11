@@ -73,7 +73,7 @@ exports.config = {
             commandTimeout: '7200',
             sessionOverride: true,
             debugLogSpacing: true,
-            platformVersion: '9.1',
+            platformVersion: '10.0',
             platformName: 'iOS',
             showIosLog: true,
             deviceName: 'iPhone 6',
