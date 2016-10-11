@@ -76,7 +76,7 @@ exports.config = {
             platformVersion: '10.0',
             platformName: 'iOS',
             showIosLog: true,
-            deviceName: 'iPhone 6',
+            deviceName: 'iPhone 7',
             nativeInstrumentsLib: true,
             isolateSimDevice: true,
             app: APP_PATH
