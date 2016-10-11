@@ -5,9 +5,9 @@ node_js: stable
 os: osx
 osx_image: xcode8
 
-before_script:
-    - npm install appium@1.5.3
+install:
     - npm install
+    - npm install appium@1.5.3
 
 script:
     - npm run lint
