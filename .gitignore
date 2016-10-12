@@ -1,3 +1,5 @@
 node_modules
 npm-debug.log
 build
+appium.log
+wdio_appium_service_debug_log.txt
