@@ -22,4 +22,28 @@ describe('launcher', () => {
         assert.equal(launcher._lowerCamelToOptionName('fooBar'), '--foo-bar');
         assert.equal(launcher._lowerCamelToOptionName('fooBarSonDo'), '--foo-bar-son-do');
     });
+
+    describe('platform specific', () => {
+        let originalPlatform = '';
+        it('should return shell on non win', () => {
+            originalPlatform = process.platform;
+            Object.defineProperty(process, 'platform', {
+                value: 'darwin'
+            });
+            assert.equal(launcher._getAppiumFileName(), 'appium');
+        });
+        it('should return cmd on win', () => {
+            originalPlatform = process.platform;
+            Object.defineProperty(process, 'platform', {
+                value: 'win32'
+            });
+            assert.equal(launcher._getAppiumFileName(), 'appium.cmd');
+        });
+        after(() => {
+            console.log(originalPlatform)
+            Object.defineProperty(process, 'platform', {
+                value: originalPlatform
+            });
+        });
+    });
 });
