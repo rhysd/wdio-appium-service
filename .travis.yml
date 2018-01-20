@@ -7,7 +7,7 @@ osx_image: xcode8
 
 install:
     - npm install
-    - npm install appium@1.5.3
+    - npm install appium@1.7.2
 
 script:
     - npm run lint
