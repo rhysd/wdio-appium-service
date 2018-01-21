@@ -69,17 +69,19 @@ exports.config = {
 
     appium: {
         args: {
-            address: '127.0.0.1',
-            commandTimeout: '7200',
-            sessionOverride: true,
-            debugLogSpacing: true,
-            platformVersion: '10.0',
-            platformName: 'iOS',
-            showIosLog: true,
-            deviceName: 'iPhone 7',
-            nativeInstrumentsLib: true,
-            isolateSimDevice: true,
-            app: APP_PATH
+            defaultCapabilities: JSON.stringify({
+                address: '127.0.0.1',
+                commandTimeout: '7200',
+                sessionOverride: true,
+                debugLogSpacing: true,
+                platformVersion: '11.2',
+                deviceName: 'iPhone 7',
+                platformName: 'iOS',
+                showIosLog: true,
+                nativeInstrumentsLib: true,
+                isolateSimDevice: true,
+                app: APP_PATH
+            })
         }
     }
 };
