@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const APP_PATH = path.join(__dirname, '../node_modules/ios-uicatalog/build/Release-iphonesimulator/UICatalog-iphonesimulator.app');
+const APP_PATH = path.join(__dirname, '../../node_modules/ios-uicatalog/build/Release-iphonesimulator/UICatalog-iphonesimulator.app');
 
 exports.config = {
     port: 4723,
@@ -32,10 +32,10 @@ exports.config = {
 
     capabilities: [{
         browserName: 'iOS',
-        appiumVersion: '1.5.3',
+        appiumVersion: '1.7.2',
         platformName: 'iOS',
-        platformVersion: '8.1',
-        deviceName: 'iPhone 6',
+        platformVersion: '11.2',
+        deviceName: 'iPhone 7',
         orientation: 'PORTRAIT',
         app: APP_PATH
     }],
@@ -69,17 +69,14 @@ exports.config = {
 
     appium: {
         args: {
-            address: '127.0.0.1',
-            commandTimeout: '7200',
-            sessionOverride: true,
-            debugLogSpacing: true,
-            platformVersion: '10.0',
-            platformName: 'iOS',
-            showIosLog: true,
-            deviceName: 'iPhone 7',
-            nativeInstrumentsLib: true,
-            isolateSimDevice: true,
-            app: APP_PATH
+            defaultCapabilities: JSON.stringify({
+                platformVersion: '11.2',
+                deviceName: 'iPhone 7',
+                platformName: 'iOS',
+                showIosLog: true,
+                nativeInstrumentsLib: true,
+                app: APP_PATH
+            })
         }
     }
 };
